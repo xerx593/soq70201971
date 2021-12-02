@@ -1,7 +1,6 @@
 package com.example.demo;
 
-import static com.example.demo.DemoApplication.MyContentSecurityPolicyHeaderWriter.CONTENT_SECURITY_POLICY_HEADER;
-import static com.example.demo.DemoApplication.MyContentSecurityPolicyHeaderWriter.DEFAULT_SRC_SELF_POLICY;
+import static com.example.demo.DemoApplication.DEFAULT_SRC_SELF_POLICY;
 import static org.hamcrest.Matchers.containsString;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +15,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class DemoApplicationTests {
 
+  private static final String CONTENT_SECURITY_POLICY_HEADER = "Content-Security-Policy";
+  
   @Autowired
   private MockMvc mockMvc;
 
