@@ -5,10 +5,14 @@ Answer for https://stackoverflow.com/q/70201971/592355
 - jdk (configured 17)
 - maven
 
-## Build and Test
+## Clean Build and Test
 
     mvn clean install
-    
+
+## Integration Test    
+
+    mvn failsafe:integration-test
+
 ## Run
 
     mvn spring-boot:run
